@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: {
+          DEFAULT: "#030712",
+          darker: "#020617",
+          slate: "#0f172a",
+          gray: "#111827",
+        },
+        primary: {
+          DEFAULT: "#8b5cf6",
+          indigo: "#6366f1",
+          cyan: "#06b6d4",
+        },
+        accent: {
+          pink: "#ec4899",
+          cyan: "#22d3ee",
+          purple: "#a855f7",
+        },
+        glass: {
+          low: "rgba(255, 255, 255, 0.05)",
+          med: "rgba(255, 255, 255, 0.08)",
+          high: "rgba(255, 255, 255, 0.12)",
+        }
+      },
+      backgroundImage: {
+        'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+        'aurora-gradient': 'radial-gradient(circle at 50% -20%, #3b82f6, #8b5cf6, #030712)',
+      },
+      backdropBlur: {
+        'xs': '2px',
+      },
+      boxShadow: {
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        'glass-hover': '0 8px 32px 0 rgba(139, 92, 246, 0.25)',
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        }
+      }
+    },
+  },
+  plugins: [],
+}
